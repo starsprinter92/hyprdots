@@ -34,8 +34,8 @@
     //         "4": "",
     //         "5": "",
     //         "urgent": "",
-             "active": "●",
-             "urgent": "●",
+             "active": "◉",
+             "urgent": "◉",
              "default": "◯"
          },
          "persistent-workspaces": {
