@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# wallpaper
+swww-daemon &
+swww img ~/.config/hypr/wallpaper.jpg &
+
+# waybar
+waybar &
+
+# notifications
+dunst &
+
+# osd
+swayosd-server &
