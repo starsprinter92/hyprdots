@@ -7,6 +7,12 @@ cd yay
 makepkg -si
 echo "==> Installing more required packages..."
 yay -Sq --noconfirm nitch neovim starship neovide swww swayosd cava starship rofi-wayland wezterm-git
+echo "==> Installing plugins..."
+hyprpm update
+hyprpm add https://github.com/hyprwm/hyprland-plugins
+hyprpm enable hyprexpo
+hyprpm enable hyprtrails
+hyprpm enable hyprbars
 echo "==> Planting dotfiles..."
 git clone https://github.com/starsprinter92/hyprdots/
 cd hyprdots
