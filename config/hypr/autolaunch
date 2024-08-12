@@ -8,7 +8,10 @@ swww img ~/.config/hypr/wallpaper.jpg &
 waybar &
 
 # notifications
-dunst &
+swaync &
 
 # osd
 swayosd-server &
+
+# plugins
+hyprpm reload -n
