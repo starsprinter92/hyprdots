@@ -1,0 +1,24 @@
+modules = [
+    "OS",
+    "Kernel",
+    "Host",
+    "CPU",
+    "Cores",
+    "Usage",
+    "Temp",
+    "Mem",
+    "Swap",
+]
+
+[custom_parameters]
+
+[custom_labels]
+os = "OS"
+kernel = "Kernel"
+host = "Host"
+cpu = "CPU"
+cores = "Cores"
+usage = "Usage"
+temp = "Temp"
+mem = "Memory"
+swap = "Swap"

@@ -2,9 +2,11 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     #pokemon-colorscripts -r --no-title &&
     #command clear; echo; echo; seq 1 (tput cols) | sort -R | spark | toilet -f term --rainbow; echo; echo
-    nitch
+    date
+    pokemon-colorscripts -r --no-title
     starship init fish | source &
 	  ~/.config/fish/tty.sh &
+    hyprctl splash
 end
 
 alias fetch="fastfetch -l ~/.config/fastfetch/ascii.txt"
@@ -87,7 +89,6 @@ export EDITOR="nvim"
 
 # User abbreviations
 abbr -a -g ytmp3 'youtube-dl --extract-audio --audio-format mp3'				# Convert/Download YT videos as mp3
-abbr -a -g cls 'clear'																								# Clear
 abbr -a -g h 'history'																								# Show history
 abbr -a -g upd 'paru -Syu --noconfirm'																								# Update everything
 abbr -a -g please 'sudo'																						# Polite way to sudo
@@ -146,7 +147,6 @@ alias bat='bat --theme="Catppuccin-mocha"'
 alias hc=herbstclient
 alias code='code-insiders'
 set MOZ_ENABLE_WAYLAND 1
-set XDG_CURRENT_DESKTOP sway
 
 
 # Created by `pipx` on 2022-09-11 05:02:32

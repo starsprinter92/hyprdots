@@ -1,0 +1,48 @@
+@import "mocha.css";
+* {
+	background-image: none;
+  font-family: "FiraCode Nerd Font SemBd";
+  font-size: 175px;
+  padding-bottom: 10px;
+  padding-right: 25px
+/*	box-shadow: none; */
+}
+
+window {
+	background-color: @base;
+}
+
+button {
+  margin: 10px;
+    border-radius: 15px;
+    color: @blue;
+	background-color: @surface0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+  box-shadow: 5px 10px 8px @crust;
+}
+
+button:focus, button:active, button:hover {
+	background-color: @surface2;
+	outline-style: none;
+  box-shadow: 5px 10px 8px @mantle;
+}
+
+#lock {
+}
+
+#logout {
+}
+
+#suspend {
+}
+
+#hibernate {
+}
+
+#shutdown {
+}
+
+#reboot {
+}

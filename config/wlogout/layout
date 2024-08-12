@@ -1,0 +1,36 @@
+{
+    "label" : "",
+    "action" : "hyprlock",
+    "text" : "",
+    "keybind" : "l"
+}
+{
+    "label" : "",
+    "action" : "systemctl hibernate",
+    "text" : "",
+    "keybind" : "l"
+}
+{
+    "label" : "󰍃",
+    "action" : "loginctl terminate-user $USER",
+    "text" : "󰍃",
+    "keybind" : "e"
+}
+{
+    "label" : "",
+    "action" : "systemctl poweroff",
+    "text" : "",
+    "keybind" : "s"
+}
+{
+    "label" : "󰤄",
+    "action" : "systemctl suspend",
+    "text" : "󰤄",
+    "keybind" : "u"
+}
+{
+    "label" : "",
+    "action" : "systemctl reboot",
+    "text" : "",
+    "keybind" : "r"
+}

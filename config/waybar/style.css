@@ -1,11 +1,16 @@
 @import "mocha.css";
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: FiraCode Nerd Font SemBd;
     font-size: 17px;
     border-radius: 30px;
     margin: 2px;
+    transition: all 0.3s ease-in-out;
+    
 }
+#clock:hover {
+    background-color: @base;
+    min-width: 100px
+  }
 
 window#waybar {
     background-color: transparent;
@@ -49,6 +54,14 @@ window#waybar.hidden {
 	100% {
 		background-position: 200% 200%;
 	}
+}
+
+#taskbar {
+  background-color: @crust;
+}
+
+#taskbar button:hover {
+  background-color: transparent;
 }
 
 #custom-music.Paused,
@@ -99,7 +112,7 @@ button:hover {
     padding-left: 10px;
     margin-left: 5px;
     margin-right: 5px;
-    background-color: @base;
+    background-color: @mantle;
     color: @green;
     min-width: 30px;
     border-radius: 30px
@@ -129,8 +142,35 @@ button:hover {
 #custom-launcher {
   min-width: 40px;
   background-color: @crust;
+  transition: all 0.3s ease-in-out;
 }
 
+#custom-expand {
+  min-width: 40px;
+  background-color: @crust;
+  transition: all 0.3s ease-in-out;
+}
+
+#custom-launcher:hover {
+  min-width: 60px;
+  background-color: @base;
+}
+
+#custom-power {
+  min-width: 40px;
+  padding-right: 3px;
+  background-color: @crust;
+  transition: all 0.3s ease-in-out;
+}
+
+#custom-power:hover {
+  min-width: 60px;
+  background-color: @base;
+}
+#pulseaudio:hover {
+  min-width: 90px;
+  background-color: @base;
+}
 #clock,
 #battery,
 #cpu,

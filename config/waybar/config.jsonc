@@ -8,6 +8,7 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/launcher",
+        "wlr/taskbar",
         "hyprland/workspaces",
         "cpu"
     ],
@@ -18,17 +19,32 @@
         "custom/music",
         "pulseaudio",
         "network",
-        "tray"
+        "custom/power"
     ],
+    "custom/expand":{
+        "on-click":"~/.config/waybar/scripts/expand_toolbar",
+        "format":"{}",
+        "exec":"~/.config/waybar/scripts/tools/expand arrow-icon"
+    },
+       "custom/power": {
+        "format": "{}",
+        "tooltip": true,
+        "exec": "echo '{\"text\":\" ⏻ \",\"tooltip\":\"Power Menu\"}'",
+        "return-type": "json",
+        "on-click": "sleep 0.15 && wlogout",
+        // "on-click": "pkill wofi || wofi --show drun -n",
+        // "on-click-right": "pkill wofi || wofi --show run -n",
+    },
        "custom/launcher": {
         "format": "{}",
         "tooltip": true,
         "exec": "echo '{\"text\":\"🚀\",\"tooltip\":\"Drun\"}'",
         "return-type": "json",
-        "on-click": "pkill rofi || sleep 0.15 && sh .config/rofi/bin/launcher",
+        "on-click": "killall rofi || sleep 0.15 && sh .config/rofi/bin/launcher",
         // "on-click": "pkill wofi || wofi --show drun -n",
         // "on-click-right": "pkill wofi || wofi --show run -n",
     },
+ 
     "margin-right": 10,
     "margin-left": 10,
     "margin-top": 10,
@@ -64,6 +80,11 @@
             "locked": "",
             "unlocked": ""
         }
+    },
+    "wlr/taskbar": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "on-click-middle": "close",
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -175,7 +196,6 @@
         "tooltip-format": " {ifname} via {gwaddr} ",
         "format-linked": " {ifname} (No IP)  ",
         "format-disconnected": " Disconnected ",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -207,18 +227,6 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
-    "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
     },
     "custom/music": {
       "format": "{icon}{}",

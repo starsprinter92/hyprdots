@@ -19,8 +19,8 @@ window {
     border-radius:                  10px;
     width:                          500px;
     anchor:                         center;
-    x-offset:                       0;
-    y-offset:                       0;
+    x-offset:                       10;
+    y-offset:                       10;
 }
 
 prompt {
