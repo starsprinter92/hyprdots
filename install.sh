@@ -17,5 +17,7 @@ echo "==> Planting dotfiles..."
 git clone https://github.com/starsprinter92/hyprdots/
 cd hyprdots
 cp -r config/* ~/.config/
+echo "==> Additional setup..."
+chmod +x ~/.config/hypr/autostart
 echo "==> Installation done. Please restart."
 exit
