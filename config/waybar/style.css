@@ -61,8 +61,16 @@ window#waybar.hidden {
 }
 
 #taskbar button:hover {
-  background-color: transparent;
+  border-radius: 30px;
+  background-color: @base;
+  margin: 2px;
 }
+
+#taskbar button {
+  border-radius: 30px;
+  margin: 2px;
+}
+
 
 #custom-music.Paused,
 #custom-music.Stopped {
