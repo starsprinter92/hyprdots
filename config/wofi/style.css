@@ -1,0 +1,40 @@
+@import "mocha.css";
+* {
+    font-family: FiraCode Nerd Font SemBd;
+    border-radius: 10px
+  }
+
+window {
+  background-color: @crust;
+  margin: 5px;
+  border-radius: 15px;
+}
+
+#input {
+  background-color: @base;
+  margin: 5px;
+  color: @text
+}
+
+#entry:selected {
+  background-color: @blue;
+  color: @base;
+}
+
+#text {
+  color: @text
+}
+
+#outer-box {
+  border: 6px solid @blue;
+  border-radius: 15px;
+}
+
+#text:selected {
+  color: @crust;
+}
+
+#entry {
+  margin: 5px;
+  border-radius: 5px;
+}
