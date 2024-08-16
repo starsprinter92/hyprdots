@@ -8,11 +8,9 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/launcher",
-        "wlr/taskbar",
-        "hyprland/workspaces",
         "cpu",
-        "custom/scrot",
-        "hyprland/window"
+        "hyprland/workspaces",
+        "custom/splash"
     ],
     "modules-center": [
         "custom/lock",
@@ -20,6 +18,9 @@
         "custom/expo"
     ],
     "modules-right": [
+        "cpu",
+        "wlr/taskbar",
+        "custom/scrot",
         "custom/music",
         "memory",
         "pulseaudio",
@@ -39,7 +40,12 @@
         // "on-click": "pkill wofi || wofi --show drun -n",
         // "on-click-right": "pkill wofi || wofi --show run -n",
     },
-        "custom/lock": {
+         "custom/splash": {
+        "format": "{}",
+        "tooltip": false,
+        "exec": "hyprctl splash",
+    },
+       "custom/lock": {
         "format": "{}",
         "tooltip": true,
         "exec": "echo '{\"text\":\"  \",\"tooltip\":\"Hyprlock lock screen\"}'",
@@ -61,24 +67,6 @@
         "format": "{}",
         "tooltip": true,
         "exec": "echo '{\"text\":\"󰕰\",\"tooltip\":\"Expo\"}'",
-        "return-type": "json",
-        "on-click": "sleep 0.15 && hyprctl dispatch hyprexpo:expo toggle",
-        // "on-click": "pkill wofi || wofi --show drun -n",
-        // "on-click-right": "pkill wofi || wofi --show run -n",
-    },
-        "custom/scrot": {
-        "format": "{}",
-        "tooltip": true,
-        "exec": "echo '{\"text\":\"\",\"tooltip\":\"Screenshot\"}'",
-        "return-type": "json",
-        "on-click": "grim - |wl-copy && notify-send 'Screenshot copied to clipboard' -a 'ss'",
-        // "on-click": "pkill wofi || wofi --show drun -n",
-        // "on-click-right": "pkill wofi || wofi --show run -n",
-    },
-        "custom/expo": {
-        "format": "{}",
-        "tooltip": true,
-        "exec": "echo '{\"text\":\"󰝘\",\"tooltip\":\"Expo\"}'",
         "return-type": "json",
         "on-click": "sleep 0.15 && hyprctl dispatch hyprexpo:expo toggle",
         // "on-click": "pkill wofi || wofi --show drun -n",
@@ -190,7 +178,7 @@
     },
     "cpu": {
         "interval":1,
-        "format": "CPU: {icon0} {icon1} {icon2} {icon3} ",
+        "format": " {icon0} {icon1} {icon2} {icon3} ",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
     "memory": {

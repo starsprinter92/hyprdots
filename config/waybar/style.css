@@ -217,6 +217,16 @@ button:hover {
   transition: all 0.3s ease-in-out;
 }
 
+#custom-splash {
+  min-width: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: @crust;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
 #custom-power:hover {
   min-width: 60px;
   background-color: @base;
