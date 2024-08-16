@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 50, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 10, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -10,15 +10,19 @@
         "custom/launcher",
         "wlr/taskbar",
         "hyprland/workspaces",
-        "cpu"
+        "cpu",
+        "custom/scrot",
+        "hyprland/window"
     ],
     "modules-center": [
-        "clock"
+        "custom/lock",
+        "clock",
+        "custom/expo"
     ],
     "modules-right": [
         "custom/music",
+        "memory",
         "pulseaudio",
-        "network",
         "custom/power"
     ],
     "custom/expand":{
@@ -35,12 +39,39 @@
         // "on-click": "pkill wofi || wofi --show drun -n",
         // "on-click-right": "pkill wofi || wofi --show run -n",
     },
+        "custom/lock": {
+        "format": "{}",
+        "tooltip": true,
+        "exec": "echo '{\"text\":\"  \",\"tooltip\":\"Hyprlock lock screen\"}'",
+        "return-type": "json",
+        "on-click": "sleep 0.15 && hyprlock",
+        // "on-click": "pkill wofi || wofi --show drun -n",
+        // "on-click-right": "pkill wofi || wofi --show run -n",
+    },
        "custom/launcher": {
         "format": "{}",
         "tooltip": true,
-        "exec": "echo '{\"text\":\"🚀\",\"tooltip\":\"Drun\"}'",
+        "exec": "echo '{\"text\":\"\",\"tooltip\":\"Drun\"}'",
         "return-type": "json",
-        "on-click": "killall rofi || sleep 0.15 && sh .config/rofi/bin/launcher",
+        "on-click": "echo 'pkill wofi || wofi' |sh",
+        // "on-click": "pkill wofi || wofi --show drun -n",
+        // "on-click-right": "pkill wofi || wofi --show run -n",
+    },
+        "custom/expo": {
+        "format": "{}",
+        "tooltip": true,
+        "exec": "echo '{\"text\":\"󰕰\",\"tooltip\":\"Expo\"}'",
+        "return-type": "json",
+        "on-click": "sleep 0.15 && hyprctl dispatch hyprexpo:expo toggle",
+        // "on-click": "pkill wofi || wofi --show drun -n",
+        // "on-click-right": "pkill wofi || wofi --show run -n",
+    },
+        "custom/scrot": {
+        "format": "{}",
+        "tooltip": true,
+        "exec": "echo '{\"text\":\"\",\"tooltip\":\"Screenshot\"}'",
+        "return-type": "json",
+        "on-click": "grim - |wl-copy && notify-send 'Screenshot copied to clipboard' -a 'ss'",
         // "on-click": "pkill wofi || wofi --show drun -n",
         // "on-click-right": "pkill wofi || wofi --show run -n",
     },
@@ -141,11 +172,11 @@
     },
     "cpu": {
         "interval":1,
-        "format": " {icon0} {icon1} {icon2} {icon3} ",
+        "format": "CPU: {icon0} {icon1} {icon2} {icon3} ",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}%  ",
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -191,7 +222,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " {essid} ({signalStrength}%)  ",
+        "format-wifi": " {essid}  ",
         "format-ethernet": " {ipaddr}/{cidr} ",
         "tooltip-format": " {ifname} via {gwaddr} ",
         "format-linked": " {ifname} (No IP)  ",

@@ -2,7 +2,7 @@
 * {
     font-family: FiraCode Nerd Font SemBd;
     font-size: 17px;
-    border-radius: 30px;
+    border-radius: 10px;
     margin: 2px;
     transition: all 0.3s ease-in-out;
     
@@ -60,14 +60,24 @@ window#waybar.hidden {
   background-color: @crust;
 }
 
+#window {
+  background-color: @crust;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: none
+}
+
+#waybar.empty #window {
+  background: none;
+}
+
 #taskbar button:hover {
-  border-radius: 30px;
+/*  border-radius: 30px;*/
   background-color: @base;
   margin: 2px;
 }
 
 #taskbar button {
-  border-radius: 30px;
   margin: 2px;
 }
 
@@ -93,7 +103,6 @@ button {
     box-shadow: inset 0 -3px transparent;
     /* Avoid rounded borders under each button name */
     border: none;
-    border-radius: 0;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -110,7 +119,7 @@ button:hover {
     margin-right: 5px;
     background-color: @crust;
     color: @green;
-    border-radius: 30px;
+/*    border-radius: 30px; */
     transition: all 0.3s ease-in-out;
 }
 
@@ -123,7 +132,6 @@ button:hover {
     background-color: @mantle;
     color: @green;
     min-width: 30px;
-    border-radius: 30px
 }
 
 
@@ -139,7 +147,7 @@ button:hover {
 #workspaces {
   background-color: transparent;
   margin: 2px;
-  font-size: 30
+  font-size: 30px
 }
 
 #mode {
@@ -150,6 +158,29 @@ button:hover {
 #custom-launcher {
   min-width: 40px;
   background-color: @crust;
+  padding-right: 6px;
+  color: @sapphire;
+  transition: all 0.3s ease-in-out;
+}
+
+#custom-scrot {
+  min-width: 40px;
+  background-color: @crust;
+  padding-right: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+#custom-expo {
+  min-width: 40px;
+  background-color: @crust;
+  padding-right: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+#custom-lock {
+  min-width: 40px;
+  background-color: @crust;
+  padding-right: 3px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -160,6 +191,21 @@ button:hover {
 }
 
 #custom-launcher:hover {
+  min-width: 60px;
+  background-color: @base;
+}
+
+#custom-scrot:hover {
+  min-width: 60px;
+  background-color: @base;
+}
+
+#custom-expo:hover {
+  min-width: 60px;
+  background-color: @base;
+}
+
+#custom-lock:hover {
   min-width: 60px;
   background-color: @base;
 }
@@ -218,7 +264,6 @@ button:hover {
 #clock {
     color: @teal;
     min-width: 70px;
-    margin: 0px;
     background-color: @crust;
 }
 
@@ -279,8 +324,10 @@ label:focus {
 }
 
 #memory {
-    background-color: #9b59b6;
-}
+    background-color: @crust;
+    color: @blue;
+    padding: 10px;
+  }
 
 #disk {
     background-color: #964B00;
@@ -294,25 +341,21 @@ label:focus {
     background-color: @crust;
     color: @blue;
     padding-left: 5px;
-    margin: 0px;
 }
 
 #network.disconnected {
     background-color: @crust;
     color: @red;
-    margin: 0px;
 }
 
 #pulseaudio {
     background-color: @crust;
     color: @mauve;
-    margin: 0px;
 }
 
 #pulseaudio.muted {
     background-color: @crust;
     color: @yellow;
-    margin: 0px;
 }
 
 #wireplumber {

@@ -1,0 +1,7 @@
+show=drun
+width=25%
+term=kitty
+prompt=
+no_actions=true
+allow_images=true
+image_size=20px

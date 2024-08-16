@@ -2,13 +2,16 @@
 
 # wallpaper
 swww-daemon &
-swww img ~/.config/hypr/wallpaper.jpg &
+swww img ~/.config/hypr/wallpaper.png &
 
 # waybar
 waybar &
 
 # notifications
-dunst &
+swaync &
 
 # osd
 swayosd-server &
+
+# plugins
+hyprpm reload -n
