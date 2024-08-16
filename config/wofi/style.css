@@ -1,0 +1,54 @@
+@import "mocha.css";
+* {
+    font-family: FiraCode Nerd Font SemBd;
+    border-radius: 10px
+  }
+
+window {
+/*  background-color: @crust;*/
+  background: transparent;
+  margin: 5px;
+  border-radius: 15pt;
+}
+
+#input {
+  background-color: @base;
+  border: 6px solid @blue;
+  padding-left: 10px;
+  padding-right: 5px;
+  margin: 5px;
+  margin-bottom: 20px;
+  border-radius: 999pt;
+  color: @text
+}
+
+#entry:selected {
+    background: linear-gradient(45deg, @blue 0%, @mauve 100%);
+  color: @base;
+}
+
+#text {
+  color: @text
+}
+
+#outer-box {
+  /*border: 6px solid @blue;*/
+  border-radius: 15pt;
+  padding: 5px;
+}
+
+#scroll {
+  background-color: @base;
+  border: 6px solid @blue;
+  padding: 5px;
+  border-radius: 15pt;
+}
+
+#text:selected {
+  color: @crust;
+}
+
+#entry {
+  margin: 5px;
+  border-radius: 5px;
+}
