@@ -2,9 +2,6 @@ show=drun
 width=25%
 term=kitty
 prompt=
-<<<<<<< HEAD
 no_actions=true
 allow_images=true
 image_size=20px
-=======
->>>>>>> 3d5e233f0c3a63a9ced8a241821285f5d2986a4b

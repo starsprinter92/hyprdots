@@ -1,6 +1,6 @@
-@import "mocha.css";
+@import ".config/wofi/mocha.css";
 * {
-    font-family: FiraCode Nerd Font SemBd;
+    font-family: JetbrainsMono NF Semibold;
     border-radius: 10px
   }
 
@@ -12,7 +12,6 @@ window {
 }
 
 #input {
-<<<<<<< HEAD
   background-color: @crust;
   border: none;
 /*border: 6px solid @blue;*/
@@ -31,7 +30,7 @@ window {
 }
 
 #entry:selected {
-    background: linear-gradient(45deg, @blue 0%, @mauve 100%);
+    background: @base;
     color: @base;
 }
 
@@ -45,21 +44,6 @@ window {
 	100% {
 		background-position: 400% 200%;
 	}
-=======
-  background-color: @base;
-  border: 6px solid @blue;
-  padding-left: 10px;
-  padding-right: 5px;
-  margin: 5px;
-  margin-bottom: 20px;
-  border-radius: 999pt;
-  color: @text
-}
-
-#entry:selected {
-    background: linear-gradient(45deg, @blue 0%, @mauve 100%);
-  color: @base;
->>>>>>> 3d5e233f0c3a63a9ced8a241821285f5d2986a4b
 }
 
 #text {
@@ -70,7 +54,6 @@ window {
   /*border: 6px solid @blue;*/
   border-radius: 15pt;
   padding: 5px;
-<<<<<<< HEAD
   border: none;
 }
 
@@ -79,24 +62,11 @@ window {
 /*border: 6px solid @blue;*/
   padding: 5px;
   border-radius: 10px;
-=======
 }
 
-#scroll {
-  background-color: @base;
-  border: 6px solid @blue;
-  padding: 5px;
-  border-radius: 15pt;
->>>>>>> 3d5e233f0c3a63a9ced8a241821285f5d2986a4b
-}
-
-#text:selected {
-  color: @crust;
-}
 
 #entry {
   margin: 5px;
-<<<<<<< HEAD
   padding: 10px;
   border-radius: 5px;
 }
@@ -104,7 +74,3 @@ window {
 #img {
   padding-right: 5px;
 }
-=======
-  border-radius: 5px;
-}
->>>>>>> 3d5e233f0c3a63a9ced8a241821285f5d2986a4b
