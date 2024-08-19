@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 50, // Waybar height (to be removed for auto height)
+    "height": 55, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 10, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -18,12 +18,13 @@
         "custom/expo"
     ],
     "modules-right": [
-        "cpu",
+        "hyprland/window",
         "wlr/taskbar",
         "custom/scrot",
         "custom/music",
         "memory",
         "pulseaudio",
+        "custom/nc",
         "custom/power"
     ],
     "custom/expand":{
@@ -54,10 +55,19 @@
         // "on-click": "pkill wofi || wofi --show drun -n",
         // "on-click-right": "pkill wofi || wofi --show run -n",
     },
+        "custom/nc": {
+        "format": "{}",
+        "tooltip": true,
+        "exec": "echo '{\"text\":\"  \",\"tooltip\":\"SwayNC\"}'",
+        "return-type": "json",
+        "on-click": "sleep 0.15 && swaync-client -t -sw",
+        // "on-click": "pkill wofi || wofi --show drun -n",
+        // "on-click-right": "pkill wofi || wofi --show run -n",
+    },
        "custom/launcher": {
         "format": "{}",
         "tooltip": true,
-        "exec": "echo '{\"text\":\"\",\"tooltip\":\"Drun\"}'",
+        "exec": "echo '{\"text\":\"󰣇\",\"tooltip\":\"Drun\"}'",
         "return-type": "json",
         "on-click": "echo 'pkill wofi || wofi' |sh",
         // "on-click": "pkill wofi || wofi --show drun -n",
@@ -85,6 +95,7 @@
     "margin-right": 10,
     "margin-left": 10,
     "margin-top": 10,
+    "margin-bottom": 0,
     // Modules configuration
      "hyprland/workspaces": {
          //"disable-scroll": true,
@@ -98,9 +109,9 @@
     //         "4": "",
     //         "5": "",
     //         "urgent": "",
-             "active": "◉",
-             "urgent": "◉",
-             "default": "◯"
+             "active": "",
+             "urgent": "",
+             "default": ""
          },
          "persistent-workspaces": {
            "1": [],
@@ -274,12 +285,33 @@
       },
       "escape": true,
       "tooltip": true,
-      "exec": "~/.config/waybar/caway",
-      "return-type": "json",
+      "exec": "sh ~/.config/waybar/cava.sh",
       "on-click": "playerctl play-pause",
       "on-scroll-up": "playerctl previous",
       "on-scroll-down": "playerctl next",
       "on-click-right": "g4music",
-      "max-length": 35
-    }
+      "min-length": 5
+    },
+    "cava": {
+        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 30,
+        "autosens": 1,
+        "sensitivity": 100,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+                   "on-click-right": "mode"
+                   }
+    },
 }
