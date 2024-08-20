@@ -14,4 +14,10 @@ swaync &
 swayosd-server &
 
 # plugins
-hyprpm reload -n
+hyprpm reload -n &
+
+# terminal images
+ueverzug layer &
+
+# splash
+~/.config/hypr/splashswitch.sh

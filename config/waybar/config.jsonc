@@ -44,7 +44,7 @@
          "custom/splash": {
         "format": "{}",
         "tooltip": false,
-        "exec": "hyprctl splash",
+        "exec": "~/.config/hypr/splashsee.sh",
     },
        "custom/lock": {
         "format": "{}",
