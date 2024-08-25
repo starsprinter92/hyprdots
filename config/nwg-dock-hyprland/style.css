@@ -1,0 +1,48 @@
+@import 'mocha.css';
+* {
+  border-bottom: none;
+	box-shadow: none
+}
+window {
+  background: @crust;
+  margin: 5px;
+	border-radius: 10px;
+	border-style: none;
+}
+
+#box {
+  /* Define attributes of the box surrounding icons here */
+  padding: 5px
+}
+
+#active {
+	border-radius: 10px;
+  border-bottom: 3px solid @blue;
+}
+
+button, image {
+	background: none;
+	border-style: none;
+  border-bottom: none;
+	color: @base
+}
+
+button {
+	border-style: none;
+	border-radius: 10px;
+  padding: 5px;
+  font-size: 12px
+}
+
+button:hover {
+	border-style: none;
+	background-color: @base;
+	border-radius: 10px;
+}
+
+button:active {
+		border-style: none;
+	background-color: @base;
+	border-radius: 10px;
+box-shadow: none
+}
