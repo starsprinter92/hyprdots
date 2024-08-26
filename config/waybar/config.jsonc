@@ -1,29 +1,26 @@
 // -*- mode: jsonc -*-
 {
     // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 55, // Waybar height (to be removed for auto height)
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 60, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 10, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         "custom/launcher",
+        "wlr/taskbar",
         "cpu",
         "hyprland/workspaces",
         "custom/splash"
     ],
     "modules-center": [
-        "custom/lock",
-        "clock",
-        "custom/expo"
     ],
     "modules-right": [
-        "hyprland/window",
-        "wlr/taskbar",
         "custom/scrot",
         "custom/music",
         "memory",
         "pulseaudio",
+        "clock",
         "custom/nc",
         "custom/power"
     ],
@@ -185,7 +182,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "{:%I:%M %p}"
     },
     "cpu": {
         "interval":1,
