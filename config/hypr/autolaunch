@@ -22,5 +22,3 @@ ueverzug layer &
 # splash
 ~/.config/hypr/splashswitch.sh &
 
-# dock
-nwg-dock-hyprland -mb 10 -c wofi -ico ~/.config/nwg-dock-hyprland/arch.png
