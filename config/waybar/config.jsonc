@@ -1,27 +1,24 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
+    "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 60, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 10, // Gaps between modules (4px)
+    "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         "custom/launcher",
-        "wlr/taskbar",
-        "cpu",
-        "hyprland/workspaces",
-        "custom/splash"
+        "wlr/taskbar"
     ],
     "modules-center": [
+        "custom/music"
     ],
     "modules-right": [
+        "cpu",
         "custom/scrot",
-        "custom/music",
         "memory",
         "pulseaudio",
         "clock",
-        "custom/nc",
         "custom/power"
     ],
     "custom/expand":{
@@ -89,10 +86,10 @@
         // "on-click-right": "pkill wofi || wofi --show run -n",
     },
  
-    "margin-right": 10,
-    "margin-left": 10,
-    "margin-top": 10,
-    "margin-bottom": 0,
+//    "margin-right": 10,
+//    "margin-left": 10,
+//    "margin-top": 10,
+//    "margin-bottom": 0,
     // Modules configuration
      "hyprland/workspaces": {
          //"disable-scroll": true,
@@ -182,8 +179,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}",
-        "format": "{:%I:%M %p}"
+        "format": "{:%I:%M %p}",
+        "on-click": "sleep 0.15 && swaync-client -t -sw"
     },
     "cpu": {
         "interval":1,

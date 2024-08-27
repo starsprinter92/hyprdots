@@ -5,14 +5,17 @@
     border-radius: 10px;
     margin: 2px;
     transition: all 0.3s ease-in-out;
+    margin-top: 3px;
 }
 #clock:hover {
-    background-color: @base;
-    min-width: 100px
+    background-color: @surface1;
   }
 
 window#waybar {
-    background-color: transparent;
+    background-color: @crust;
+    border-radius: 0px;
+    padding-top: 5px;
+    border-top: 3px solid @mantle;
     color: @lavender;
     transition-property: background-color;
     transition-duration: .5s;
@@ -78,7 +81,9 @@ window#waybar.hidden {
 }
 
 #taskbar {
-  background-color: @crust;
+  background-color: transparent;
+  margin: 0px;
+  padding: 0px
 }
 
 #window {
@@ -95,12 +100,11 @@ window#waybar.hidden {
 
 #taskbar button:hover {
 /*  border-radius: 30px;*/
-  background-color: @base;
-  margin: 2px;
+  background-color: @surface1;
 }
 
 #taskbar button {
-  margin: 2px;
+  background-color: @base;
 }
 
 
@@ -178,20 +182,16 @@ button:hover {
 }
 
 #custom-launcher {
-      background: rgb(137, 180, 250);
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
-     background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); 
-    background-size: 400% 400%;
-    animation: gradient_f 9s cubic-bezier(.72, .39, .21, 1) infinite;
- min-width: 40px;
   padding-right: 6px;
-  color: #fff;
+  color: @sapphire;
   transition: all 0.3s ease-in-out;
+ min-width: 40px;
+ background-color: @base;
 }
 
 #custom-scrot {
   min-width: 40px;
-  background-color: @crust;
+  background-color: @base;
   padding-right: 6px;
   color: @yellow;
   transition: all 0.3s ease-in-out;
@@ -230,28 +230,35 @@ button:hover {
 
 #custom-launcher:hover {
   min-width: 60px;
+       background: rgb(137, 180, 250);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+     background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); 
+    background-size: 400% 400%;
+    animation: gradient_f 9s cubic-bezier(.72, .39, .21, 1) infinite;
+ min-width: 40px;
+  padding-right: 6px;
   background-color: @base;
+  color: #fff
 }
 
 #custom-scrot:hover {
-  min-width: 60px;
-  background-color: @base;
+  background-color: @surface1;
 }
 
 #custom-expo:hover {
   min-width: 60px;
-  background-color: @base;
+  background-color: @surface1;
 }
 
 #custom-lock:hover {
   min-width: 60px;
-  background-color: @base;
+  background-color: @surface1;
 }
 
 #custom-power {
   min-width: 40px;
   padding-right: 3px;
-  background-color: @crust;
+  background-color: @base;
   transition: all 0.3s ease-in-out;
 }
 
@@ -271,12 +278,10 @@ button:hover {
 
 
 #custom-power:hover {
-  min-width: 60px;
   background-color: @base;
 }
 #pulseaudio:hover {
-  min-width: 90px;
-  background-color: @base;
+  background-color: @surface1;
 }
 #clock,
 #battery,
@@ -316,7 +321,7 @@ button:hover {
 #clock {
     color: @teal;
     min-width: 70px;
-    background-color: @crust;
+    background-color: @base;
 }
 
 #battery {
@@ -371,12 +376,12 @@ label:focus {
 }
 
 #cpu {
-    background-color: @crust;
+    background-color: @base;
     color: @text;
 }
 
 #memory {
-    background-color: @crust;
+    background-color: @base;
     color: @blue;
     padding: 10px;
   }
@@ -401,7 +406,7 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: @crust;
+    background-color: @base;
     color: @mauve;
 }
 

@@ -6,4 +6,4 @@ no_actions=true
 allow_images=true
 image_size=20px
 location=bottom_left
-x=10
+y=-10
