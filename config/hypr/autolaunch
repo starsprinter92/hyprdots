@@ -4,11 +4,8 @@
 swww-daemon &
 swww img ~/.config/hypr/wallpaper.png &
 
-# waybar
-waybar &
-
-# notifications
-swaync &
+# ags
+ags &
 
 # osd
 swayosd-server &
