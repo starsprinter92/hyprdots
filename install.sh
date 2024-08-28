@@ -6,7 +6,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 echo "==> Installing more required packages..."
-yay -Sq --noconfirm nitch neovim starship neovide swww swayosd cava starship rofi-wayland wezterm-git nwg-dcok-hyprland
+yay -Sq --noconfirm nitch neovim starship neovide swww swayosd cava starship rofi-wayland wezterm-git grimblast-git gpu-screen-recorder hyprpicker matugen-bin python-gpustat aylurs-gtk-shell-git pipewire bluez bluez-utils btop networkmanager dart-sass wl-clipboard brightnessctl swww python gnome-bluetooth-3.0
 echo "==> Installing plugins..."
 hyprpm update
 hyprpm add https://github.com/hyprwm/hyprland-plugins
