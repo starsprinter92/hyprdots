@@ -1,0 +1,122 @@
+{
+  "theme.bar.layer": "top",
+  "theme.bar.floating": true,
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.hideUnoccupied": false,
+  "bar.windowtitle.label": true,
+  "terminal": "wezterm",
+  "theme.font.name": "Ubuntu Nerd Font",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "zen-browser",
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "󰬡",
+  "theme.bar.outer_spacing": "0.2em",
+  "theme.bar.border_radius": "10px",
+  "theme.bar.buttons.radius": "10px",
+  "bar.workspaces.icons.active": "",
+  "bar.workspaces.icons.available": "",
+  "bar.workspaces.icons.occupied": "",
+  "bar.workspaces.show_numbered": false,
+  "bar.workspaces.workspaces": 4,
+  "theme.bar.scaling": 100,
+  "theme.bar.transparent": false,
+  "theme.bar.opacity": 100,
+  "theme.bar.buttons.opacity": 100,
+  "theme.bar.menus.monochrome": false,
+  "menus.dashboard.directories.left.directory1.label": "󰉍  Downloads",
+  "menus.dashboard.directories.left.directory2.label": "󰉏  Videos",
+  "menus.dashboard.directories.left.directory3.label": "󰚝  Projects",
+  "menus.dashboard.directories.right.directory1.label": "󱧶  Documents",
+  "menus.dashboard.directories.right.directory2.label": "󰉏  Pictures",
+  "menus.dashboard.directories.right.directory3.label": "󱂵  Home",
+  "menus.dashboard.shortcuts.left.shortcut4.command": "wofi",
+  "theme.bar.margin_sides": "15em",
+  "theme.bar.margin_top": "0.9em",
+  "theme.bar.buttons.monochrome": false,
+  "theme.matugen": false,
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "clock"
+      ],
+      "right": [
+        "media",
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "systray",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "bar.clock.format": "%I:%M %p",
+  "theme.font.weight": 600,
+  "menus.dashboard.stats.enable_gpu": false,
+  "bar.launcher.icon": "󰍜",
+  "menus.dashboard.shortcuts.left.shortcut3.command": "kitty",
+  "menus.dashboard.shortcuts.left.shortcut3.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut3.tooltip": "Kitty",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Zen",
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Neovide",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "neovide",
+  "menus.dashboard.shortcuts.left.shortcut2.icon": "",
+  "menus.dashboard.directories.right.directory1.command": "kitty -d=~/Documents",
+  "bar.clock.showIcon": true,
+  "bar.clock.icon": "",
+  "bar.clock.showTime": true,
+  "bar.media.truncation": true,
+  "bar.media.show_artist": true,
+  "theme.bar.menus.opacity": 100,
+  "theme.osd.orientation": "vertical",
+  "theme.osd.location": "right",
+  "theme.osd.margins": "5px",
+  "theme.osd.radius": "10px",
+  "theme.notification.border_radius": "10px",
+  "theme.font.size": "1.2rem",
+  "bar.network.label": false,
+  "theme.bar.buttons.y_margins": "0.4em",
+  "theme.bar.menus.menu.media.scaling": 100,
+  "theme.bar.menus.menu.dashboard.confirmation_scaling": 100,
+  "theme.bar.buttons.padding_y": "0.2rem",
+  "theme.bar.buttons.padding_x": "0.7rem",
+  "theme.bar.buttons.spacing": "5px",
+  "bar.notifications.show_total": true,
+  "menus.dashboard.powermenu.reboot": "reboot",
+  "menus.dashboard.powermenu.logout": "hyprctl dispatch exit",
+  "menus.dashboard.powermenu.shutdown": "poweroff",
+  "theme.bar.margin_bottom": "0em"
+}

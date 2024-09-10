@@ -1,24 +1,24 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 60, // Waybar height (to be removed for auto height)
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 50, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         "custom/launcher",
-        "wlr/taskbar"
+        "hyprland/workspaces"
     ],
     "modules-center": [
-        "custom/music"
+        "clock"
     ],
     "modules-right": [
         "cpu",
         "custom/scrot",
         "memory",
         "pulseaudio",
-        "clock",
+        "custom/music",
         "custom/power"
     ],
     "custom/expand":{
@@ -63,7 +63,7 @@
         "tooltip": true,
         "exec": "echo '{\"text\":\"󰣇\",\"tooltip\":\"Drun\"}'",
         "return-type": "json",
-        "on-click": "echo 'pkill wofi || wofi' |sh",
+        "on-click": "tofi-drun | xargs hyprctl dispatch exec",
         // "on-click": "pkill wofi || wofi --show drun -n",
         // "on-click-right": "pkill wofi || wofi --show run -n",
     },
@@ -86,26 +86,23 @@
         // "on-click-right": "pkill wofi || wofi --show run -n",
     },
  
-//    "margin-right": 10,
-//    "margin-left": 10,
-//    "margin-top": 10,
-//    "margin-bottom": 0,
+    "margin-right": 15,
+    "margin-left": 15,
+    "margin-top": 15,
+    "margin-bottom": 0,
     // Modules configuration
      "hyprland/workspaces": {
          //"disable-scroll": true,
          //"all-outputs": true,
          //"warp-on-scroll": false,
-         "format": "{icon}",
+         //"format": "{icon}",
          "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
     //         "urgent": "",
-             "active": "",
-             "urgent": "",
-             "default": ""
          },
          "persistent-workspaces": {
            "1": [],

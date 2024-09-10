@@ -8,8 +8,9 @@ local config = wezterm.config_builder()
 
 -- For example, changing the color scheme:
 config.color_scheme = 'catppuccin-mocha'
-config.font = wezterm.font "FiraCode Nerd Font SemBd"
+config.font = wezterm.font "JetbrainsMono NF SemiBold"
 config.font_size = 14
+config.default_cursor_style = 'SteadyBar'
 
 config.front_end = "WebGpu"
 

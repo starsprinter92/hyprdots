@@ -1,21 +1,19 @@
 @import "mocha.css";
 * {
     font-family: JetBrainsMono NF SemiBold;
-    font-size: 17px;
+    font-size: 15px;
     border-radius: 10px;
     margin: 2px;
     transition: all 0.3s ease-in-out;
     margin-top: 3px;
 }
 #clock:hover {
-    background-color: @surface1;
+    background-color: @base;
   }
 
 window#waybar {
-    background-color: @crust;
-    border-radius: 0px;
-    padding-top: 5px;
-    border-top: 3px solid @mantle;
+    background-color: transparent;
+    border-radius: 10px;
     color: @lavender;
     transition-property: background-color;
     transition-duration: .5s;
@@ -81,10 +79,10 @@ window#waybar.hidden {
 }
 
 #taskbar {
-  background-color: transparent;
-  margin: 0px;
-  padding: 0px
+  padding: 0px;
+  background-color: @crust
 }
+
 
 #window {
   background-color: @crust;
@@ -105,6 +103,7 @@ window#waybar.hidden {
 
 #taskbar button {
   background-color: @base;
+  margin: 4px;
 }
 
 
@@ -139,10 +138,10 @@ button:hover {
 /* you can set a style on hover for any module like this */
 
 #workspaces button {
-    padding-right: 16px;
+    /*padding-right: 16px;
     padding-left: 10px;
     margin-left: 5px;
-    margin-right: 5px;
+    margin-right: 5px;*/
     background-color: @crust;
     color: @green;
 /*    border-radius: 30px; */
@@ -151,10 +150,10 @@ button:hover {
 
 
 #workspaces button:hover {
-    padding-right: 15px;
+    /*padding-right: 15px;
     padding-left: 10px;
     margin-left: 5px;
-    margin-right: 5px;
+    margin-right: 5px;*/
     background-color: @mantle;
     color: @green;
     min-width: 30px;
@@ -181,17 +180,10 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#custom-launcher {
-  padding-right: 6px;
-  color: @sapphire;
-  transition: all 0.3s ease-in-out;
- min-width: 40px;
- background-color: @base;
-}
 
 #custom-scrot {
   min-width: 40px;
-  background-color: @base;
+  background-color: @crust;
   padding-right: 6px;
   color: @yellow;
   transition: all 0.3s ease-in-out;
@@ -228,21 +220,20 @@ button:hover {
   transition: all 0.3s ease-in-out;
 }
 
-#custom-launcher:hover {
-  min-width: 60px;
+#custom-launcher {
        background: rgb(137, 180, 250);
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
      background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); 
     background-size: 400% 400%;
     animation: gradient_f 9s cubic-bezier(.72, .39, .21, 1) infinite;
  min-width: 40px;
-  padding-right: 6px;
+  padding-right: 2px;
   background-color: @base;
   color: #fff
 }
 
 #custom-scrot:hover {
-  background-color: @surface1;
+  background-color: @base;
 }
 
 #custom-expo:hover {
@@ -258,7 +249,7 @@ button:hover {
 #custom-power {
   min-width: 40px;
   padding-right: 3px;
-  background-color: @base;
+  background-color: @crust;
   transition: all 0.3s ease-in-out;
 }
 
@@ -281,7 +272,7 @@ button:hover {
   background-color: @base;
 }
 #pulseaudio:hover {
-  background-color: @surface1;
+  background-color: @base;
 }
 #clock,
 #battery,
@@ -321,7 +312,7 @@ button:hover {
 #clock {
     color: @teal;
     min-width: 70px;
-    background-color: @base;
+    background-color: @crust;
 }
 
 #battery {
@@ -376,12 +367,12 @@ label:focus {
 }
 
 #cpu {
-    background-color: @base;
+    background-color: @crust;
     color: @text;
 }
 
 #memory {
-    background-color: @base;
+    background-color: @crust;
     color: @blue;
     padding: 10px;
   }
@@ -406,7 +397,7 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: @base;
+    background-color: @crust;
     color: @mauve;
 }
 

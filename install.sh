@@ -1,12 +1,12 @@
 #!/bin/bash
 echo "==> Installing required packages..."
 sudo pacman -Sq --noconfirm hyprland alacritty waybar fish git base-devel
-echo "==> Installing yay..."
-git clone https://aur.archlinux.org/yay.git
-cd yay
+echo "==> Installing paru..."
+git clone https://aur.archlinux.org/paru.git
+cd paru
 makepkg -si
 echo "==> Installing more required packages..."
-yay -Sq --noconfirm nitch neovim starship neovide swww swayosd cava starship rofi-wayland wezterm-git grimblast-git gpu-screen-recorder hyprpicker matugen-bin python-gpustat aylurs-gtk-shell-git pipewire bluez bluez-utils btop networkmanager dart-sass wl-clipboard brightnessctl swww python gnome-bluetooth-3.0
+paru -Sq --noconfirm nitch neovim starship neovide swww swayosd cava starship rofi-wayland wezterm-git grimblast-git gpu-screen-recorder hyprpicker matugen-bin python-gpustat aylurs-gtk-shell-git pipewire bluez bluez-utils btop networkmanager dart-sass wl-clipboard brightnessctl swww python gnome-bluetooth-3.0 waybar tofi openbox tint2 bspwm picom-ftlabs-git polybar swayosd
 echo "==> Installing plugins..."
 hyprpm update
 hyprpm add https://github.com/hyprwm/hyprland-plugins

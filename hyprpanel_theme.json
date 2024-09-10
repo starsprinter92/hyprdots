@@ -1,0 +1,17 @@
+{
+  "theme.bar.buttons.style": "default",
+  "theme.bar.buttons.dashboard.icon": "#7dc4e4",
+  "theme.bar.buttons.dashboard.hover": "#45475a",
+  "theme.bar.menus.feinttext": "#313244",
+  "theme.bar.menus.dimtext": "#585b70",
+  "theme.bar.menus.icons.passive": "#585b70",
+  "theme.bar.buttons.hover": "#7dc4e4",
+  "theme.bar.buttons.workspaces.active": "#a6e3a1",
+  "theme.bar.buttons.workspaces.available": "#89b4fa",
+  "theme.bar.buttons.workspaces.occupied": "#f9e2af",
+  "theme.bar.buttons.windowtitle.icon": "#caa6f7",
+  "theme.bar.buttons.media.icon": "#f5c2e7",
+  "theme.bar.buttons.volume.icon": "#caa6f7",
+  "theme.bar.buttons.network.icon": "#a6e3a1",
+  "theme.bar.buttons.bluetooth.icon": "#f2cdcd"
+}

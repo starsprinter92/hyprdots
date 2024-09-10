@@ -2,13 +2,12 @@
 
 # wallpaper
 swww-daemon &
-swww img ~/.config/hypr/wallpaper.png &
 
-# ags
-ags &
+# bar
+waybar &
 
-# osd
-swayosd-server &
+# winswitch
+hyprswitch init
 
 # plugins
 hyprpm reload -n &
@@ -19,3 +18,14 @@ ueverzug layer &
 # splash
 ~/.config/hypr/splashswitch.sh &
 
+# idle
+hypridle &
+
+# dropdown term
+pypr &
+
+# notifications
+swaync &
+
+# osd
+swayosd-server &
